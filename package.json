@@ -6,10 +6,12 @@
   "type": "module",
   "main": "dist/index.js",
   "bin": {
+    "route-task": "dist/route-cli.js",
     "token-guardian-mcp": "dist/index.js"
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
+    "route": "node dist/route-cli.js",
     "start": "node dist/index.js",
     "test": "vitest run",
     "typecheck": "tsc -p tsconfig.json --noEmit"

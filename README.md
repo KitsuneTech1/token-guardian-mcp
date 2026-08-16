@@ -7,6 +7,8 @@ It does two jobs:
 - Reports which agents, models, and sessions are processing the most tokens.
 - Recommends the cheapest safe model and effort level for a specific task.
 
+It also includes a dry-run `route-task` command for testing prompt-first routing before the MCP is registered anywhere.
+
 ## Hard safety boundary
 
 Token Guardian cannot change model settings, effort levels, context limits, compaction, MCP registration, or running sessions. It has no model credentials and makes no paid API calls.
@@ -32,6 +34,18 @@ Processed tokens are a workload diagnostic. They are not the same as a subscript
 Accepts the client, task, risk, and current context size. It returns a model, effort level, reasons, and an optional frontier validator.
 
 The policy fails closed. Security, architecture, production, destructive, high-risk, critical, or ambiguous work stays on a frontier model. Cheap models handle bounded mechanical work. Balanced models handle normal coding and debugging, with a frontier review when needed.
+
+## Test prompt-first routing
+
+Build the project, then run the router from any folder:
+
+```powershell
+node C:\Users\Owner\token-guardian-mcp\dist\route-cli.js --client codex --prompt "Implement a bounded TypeScript parser with tests." --cwd C:\Users\Owner
+```
+
+The working folder does not need to be a repository. The router primarily uses the prompt. It checks up to 256 names in the current folder for optional project markers, without opening file contents or scanning subfolders.
+
+The command only prints a recommendation and a session-scoped launch command. It does not run that command, change configuration, register the MCP, or touch an active session. Vague continuation prompts such as `yeah, test that` stay on the frontier route because their real context is missing.
 
 ## Local requirements
 
