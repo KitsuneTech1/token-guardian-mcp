@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<evaluation>
+  <qa_pair>
+    <question>Ask for both a low-risk mechanical Codex route and a normal-risk Codex coding route. Which model is recommended for the mechanical route? Return only the model name.</question>
+    <answer>gpt-5.6-luna</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Compare normal-risk Codex coding with normal-risk Codex security work. Which model is recommended for coding? Return only the model name.</question>
+    <answer>gpt-5.6-terra</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Compare normal-risk Codex mechanical and security work. Which model is recommended for security? Return only the model name.</question>
+    <answer>gpt-5.6-sol</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Ask for low-risk mechanical routes on Claude and Codex. Which Claude model is recommended? Return only the model alias.</question>
+    <answer>haiku</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Compare normal-risk coding routes for Claude and Codex. Which Claude model is recommended? Return only the model alias.</question>
+    <answer>sonnet</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Ask for a high-risk Claude security route and a low-risk Claude mechanical route. Which model handles the security route? Return only the model alias.</question>
+    <answer>opus</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Compare local routes for low-risk mechanical work and normal-risk coding. What model label is used for the mechanical route? Return only the label.</question>
+    <answer>configured-local-model</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Request a Codex recommendation without classifying the task kind. Which model is selected by the fail-closed policy? Return only the model name.</question>
+    <answer>gpt-5.6-sol</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Compare the actions for the same normal Codex coding task at 100000 and 200000 context tokens. What exact action appears only for the larger context?</question>
+    <answer>Start a milestone handoff before continuing.</answer>
+  </qa_pair>
+  <qa_pair>
+    <question>Ask Claude to route a critical-risk mechanical task. What effort is recommended? Return only the effort.</question>
+    <answer>xhigh</answer>
+  </qa_pair>
+</evaluation>
