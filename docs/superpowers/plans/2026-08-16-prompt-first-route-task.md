@@ -109,7 +109,7 @@ Document that `route-task` works from non-repository folders and only prints adv
 
 - [ ] **Step 5: Run complete verification**
 
-Run: `npm test`, `npm run typecheck`, `npm run build`, then one real `node dist/route-cli.js` dry run from `C:\Users\Owner`.
+Run: `npm test`, `npm run typecheck`, `npm run build`, then one real `node dist/route-cli.js` dry run from the repository root.
 
 Expected: all tests pass, typecheck and build exit 0, and the live dry run prints a recommendation without changing configuration.
 

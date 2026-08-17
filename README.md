@@ -40,7 +40,7 @@ The policy fails closed. Security, architecture, production, destructive, high-r
 Build the project, then run the router from any folder:
 
 ```powershell
-node C:\Users\Owner\token-guardian-mcp\dist\route-cli.js --client codex --prompt "Implement a bounded TypeScript parser with tests." --cwd C:\Users\Owner
+node ./dist/route-cli.js --client codex --prompt "Implement a bounded TypeScript parser with tests." --cwd .
 ```
 
 The working folder does not need to be a repository. The router primarily uses the prompt. It checks up to 256 names in the current folder for optional project markers, without opening file contents or scanning subfolders.
@@ -77,3 +77,7 @@ npx @modelcontextprotocol/inspector node dist/index.js
 ## Registration status
 
 This first build is intentionally not registered with Claude, Codex, or the shared Kitsune gateway. Registration and any client restart are a separate change after the isolated server is accepted.
+
+## License
+
+MIT. See [LICENSE](LICENSE).

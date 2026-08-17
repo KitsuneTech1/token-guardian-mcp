@@ -1,7 +1,8 @@
 {
   "name": "token-guardian-mcp-server",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "license": "MIT",
   "description": "Read-only token usage analysis and conservative model routing advice for Claude Code and Codex.",
   "type": "module",
   "main": "dist/index.js",
